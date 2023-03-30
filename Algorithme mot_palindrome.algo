@@ -1,0 +1,37 @@
+Algorithme  mot_palindrome;
+Var   mot: chaine[n];
+          b: booléen;
+          i, n: entier;
+Debut
+ 
+  Ecrire("Veuillez introduire un mot de plus de 2 caractères: ");
+  
+  Repeter
+   Lire(mot);
+  Jusqu'à(longueur(mot)>2)
+
+b<-- vrai;
+n<-- longueur(mot);
+i<--1;
+  Si(n mod 2 =0) alors
+     debut
+    Tant que ((b=vrai) et (n<>i+1)) faire 
+      debut
+        Si(mot[i]=mot[n]) alors b<-- vrai;
+        Sinon b<-- faux;
+        i <--  i+1; n <--  n-1;
+    fait;
+     fin;
+   Sinon
+      debut
+    Tant que((b<--vrai) et (n<>i))faire
+      debut
+        Si(mot[i]=mot[n]) alors b<--vrai;
+        Sinon b<-- faux;
+        i <--  i+1; n <--  n-1;
+       fait;
+        fin;
+Si(b=vrai) alors Ecrire("Le mot introduit est palindrome");
+Sinon Ecrire ("Le mot introduit n est pas palindrome");
+
+FIN.
